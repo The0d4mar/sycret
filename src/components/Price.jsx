@@ -4,7 +4,7 @@ import classes from "./GiftCardModal.module.css";
 const Price = ({amounts, setSelectedAmount, selectedAmount}) =>{
     console.log(amounts)
     return(
-        <div>
+        <div className={classes.PriceBlock}>
             <h2>Выберите номинал</h2>
           <div className={classes.giftCardModalAmountScroll}>
             {amounts.map((amount) => (

@@ -19,60 +19,65 @@ const Form = ({ selectedAmount, setStep }) => {
   };
 
   return (
-    <div className={classes.giftCardModalStep}>
-      <div className={classes.giftCardModalCertificate}>
-        <h3 className={classes.giftCardModalCertificateTitle}>
-          Сертификат
-        </h3>
-        <p>{selectedAmount} ₽</p>
-      </div>
-      <div>
-        <h2>Кому подарок</h2>
-        <form>
-          <input
-            type="text"
-            name="name"
-            placeholder="Имя"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-          <InputMask
-            mask="+7 (999) 999-99-99"
-            value={formData.phone}
-            onChange={handleInputChange}
-            maskPlaceholder="+7 (___) ___-__-__"
-          >
-            {() => (
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Телефон"
-                className={classes.giftCardModalInput}
+    <div className={classes.formBlock}>
+      {error && <div className={classes.giftCardModalError}>{error}</div>}
+      <div className={classes.formBlock__cont}>
+        <dvi className = {classes.formBlock__mainPart}>
+          <div className={classes.giftCardModalCertificate}>
+            <h3 className={classes.giftCardModalCertificateTitle}>
+              Сертификат
+            </h3>
+            <p>{selectedAmount} ₽</p>
+          </div>
+          <div className={classes.formBlock__inputBlock}>
+            <h2>Кому подарок</h2>
+            <form className={classes.formBlock__form}>
+              <input className={classes.formBlock__input}
+                type="text"
+                name="name"
+                placeholder="Имя"
+                value={formData.name}
+                onChange={handleInputChange}
               />
-            )}
-          </InputMask>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-        </form>
-        {error && <p className={classes.giftCardModalError}>{error}</p>}
-        <div>
-          <button
-            className={`${classes.giftCardModalBtn} ${classes.giftCardModalBtnSecondary}`}
-            onClick={() => setStep(1)}
-          >
-            Назад
-          </button>
-          <button
-            className={`${classes.giftCardModalBtn} ${classes.giftCardModalBtnPrimary}`}
-            onClick={handlePayment}
-          >
-            Оплатить
-          </button>
+              <InputMask
+                mask="+7 (999) 999-99-99"
+                value={formData.phone}
+                onChange={handleInputChange}
+                maskPlaceholder="+7 (___) ___-__-__"
+              >
+                {() => (
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    className={classes.formBlock__input}
+                  />
+                )}
+              </InputMask>
+              <input className={classes.formBlock__input}
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+            </form>
+          
+          </div>
+        </dvi>
+        <div className={classes.formBlock__btnPart}>
+            <button
+              className={`${classes.giftCardModalBtn} ${classes.giftCardModalBtnSecondary}`}
+              onClick={() => setStep(1)}
+            >
+              Назад
+            </button>
+            <button
+              className={`${classes.giftCardModalBtn} ${classes.giftCardModalBtnPrimary}`}
+              onClick={handlePayment}
+            >
+              Оплатить
+            </button>
         </div>
       </div>
     </div>
