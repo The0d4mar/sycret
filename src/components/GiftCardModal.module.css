@@ -1,11 +1,15 @@
 
 .giftCardModal {
-  padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  min-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
+  position: relative;
+}
+.PriceBlock{
+  padding: 20px;
 }
 
 .giftCardModalStep {
@@ -17,6 +21,45 @@
   overflow-x: auto;
   gap: 10px;
   margin: 20px 0;
+}
+
+.formBlock__cont{
+  padding: 20px;
+}
+
+.formBlock__mainPart{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 80;
+}
+.formBlock__inputBlock{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formBlock__form{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.formBlock__btnPart{
+  display: flex;
+  justify-content: space-between;
+}
+
+.formBlock__input{
+  border: none;
+  border-bottom: 1px solid #b3b1b1;
+  outline: none;
+  transition: 0.5s;
+  position: relative;
 }
 
 .giftCardModalAmountCard {
@@ -44,6 +87,7 @@
   font-size: 16px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .iftCardModalBtnPrimary {
@@ -78,7 +122,13 @@
 }
 
 .giftCardModalError {
-  color: red;
-  font-size: 14px;
-  margin: 10px 0;
+  color: white;
+  background-color: rgb(248, 5, 5);
+  font-size: 20px;
+  padding: 5px 0;
+  text-align: center;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
 }
