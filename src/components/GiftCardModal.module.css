@@ -1,0 +1,84 @@
+
+.giftCardModal {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  margin: 0 auto;
+}
+
+.giftCardModalStep {
+  text-align: center;
+}
+
+.giftCardModalAmountScroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.giftCardModalAmountCard {
+  flex: 0 0 auto;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.giftCardModalAmountCard:hover {
+  border-color: #007bff;
+}
+
+.giftCardModalAmountCardSelected {
+  border-color: #007bff;
+  background-color: #eef5ff;
+}
+
+.giftCardModalBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iftCardModalBtnPrimary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.giftCardModalBtnPrimary:hover {
+  background-color: #0056b3;
+}
+
+.giftCardModalBtnSecondary {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.giftCardModalBtnSecondary:hover {
+  background-color: #e1e1e1;
+}
+
+.giftCardModalCertificate {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.giftCardModalCertificateTitle {
+  margin: 0;
+}
+
+.giftCardModalError {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
